@@ -1,10 +1,6 @@
 ﻿#include <iostream>
+#include "HWID.h"
 using namespace std;
-
-int hwidInfo()
-{
-	return 0;
-}
 
 int cpuInfo()
 {
@@ -14,11 +10,10 @@ int cpuInfo()
 int main()
 {
 	int key;
-	system("cls");
+	cls();
 	cout << "[1] HWID" << endl; cout << "[2] CPU infos" << endl; cout << "[3] exit" << endl;
 	cout << "key: ";
 	cin >> key;
-	cout << key;
 	switch (key)
 	{
 		case 1:
@@ -28,8 +23,9 @@ int main()
 		case 3:
 			exit(0);
 		default:
-			system("cls");
+			cls();
 			cout << "Please enter a vaild number!" << endl;
 			system("timeout 2");
+			main();
 	}
 }
